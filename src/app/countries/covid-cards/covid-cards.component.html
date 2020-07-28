@@ -1,0 +1,35 @@
+<DockLayout class="page" stretchLastChild="false">]
+    <StackLayout dock="top" class="card">
+        <GridLayout columns="*, auto" rows="auto" class="card-header">
+            <StackLayout col="0" row="0" verticalAlignment="center">
+                <Label text="Total Confirmed" class = "card-title"></Label>
+                <Label *ngIf="currentStats" [text] = currentStats.Active id = "active"></Label>
+            </StackLayout>
+        </GridLayout>
+        <StackLayout class="card-footer">
+            <Label text="Number of active cases of COVID-19 in the World." textWrap="true" class="footer-text"></Label>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout dock="top" class="card">
+        <GridLayout columns="*, auto" rows="auto" class="card-header">
+            <StackLayout col="0" row="0" verticalAlignment="center">
+                <Label text="Total Recovered" class = "card-title"></Label>
+                <Label *ngIf="currentStats" [text] = currentStats.Recovered id = "recovered"></Label>
+            </StackLayout>
+        </GridLayout>
+        <StackLayout class="card-footer">
+            <Label text="Number of recovered cases of COVID-19 in the World." textWrap="true" class="footer-text"></Label>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout dock="top" class="card">
+        <GridLayout columns="*, auto" rows="auto" class="card-header">
+            <StackLayout col="0" row="0" verticalAlignment="center">
+                <Label text="Total Deaths" class = "card-title"></Label>
+                <Label *ngIf="currentStats" [text] = currentStats.Deaths id = "deaths"></Label>
+            </StackLayout>
+        </GridLayout>
+        <StackLayout class="card-footer">
+            <Label text="Number of deaths caused by COVID-19 in the World." textWrap="true" class="footer-text"></Label>
+        </StackLayout>
+    </StackLayout>
+</DockLayout>

@@ -1,0 +1,10 @@
+<StackLayout *ngIf="countries">
+        <DropDown class="dropdown"
+                  hint="Poland"
+                  fontSize="28"
+                  itemsTextAlignment="center"
+                  [items]="countries"
+                  [(ngModel)]="selectedIndex"
+                  (selectedIndexChanged)="onchange($event)"
+                  colSpan="1"></DropDown>
+</StackLayout>

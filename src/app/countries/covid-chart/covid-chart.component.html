@@ -1,0 +1,28 @@
+<RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis horizontalLocation="Left"
+                lineHidden="true" labelLayoutMode="Outer" labelMargin="10" labelFormat="%.0f"
+                ticksHidden="false" ticksLength="10" ticksThickness="3" ticksColor="white"
+    ></LinearAxis>
+    <LineSeries tkCartesianSeries [items]="lineChartData" categoryProperty="Date" valueProperty="Active"
+                seriesName="Active" legendTitle="Active"></LineSeries>
+    <LineSeries tkCartesianSeries [items]="lineChartData" categoryProperty="Date" valueProperty="Recovered"
+                seriesName="Recovered" legendTitle="Recovered"></LineSeries>
+    <LineSeries tkCartesianSeries [items]="lineChartData" categoryProperty="Date" valueProperty="Deaths"
+                seriesName="Deaths" legendTitle="Deaths">
+        <PointLabelStyle tkLineLabelStyle margin="10" fontStyle="Bold" fillColor="#60B3FC" textSize="10"
+                         textColor="White"></PointLabelStyle>
+    </LineSeries>
+    <Palette tkCartesianPalette seriesName="Active">
+        <PaletteEntry tkCartesianPaletteEntry fillColor="orange" strokeColor="orange"></PaletteEntry>
+    </Palette>
+    <Palette tkCartesianPalette seriesName="Recovered">
+        <PaletteEntry tkCartesianPaletteEntry fillColor="green" strokeColor="green"></PaletteEntry>
+    </Palette>
+    <Palette tkCartesianPalette seriesName="Deaths">
+        <PaletteEntry tkCartesianPaletteEntry fillColor="red" strokeColor="red"></PaletteEntry>
+    </Palette>
+    <!-- >> chart-legend-angular-definition -->
+    <RadLegendView titleColor="white" tkCartesianLegend position="Top" height="100"
+                   enableSelection="true"></RadLegendView>
+</RadCartesianChart>
