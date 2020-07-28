@@ -24,15 +24,7 @@ export class DropDownListComponent {
     }
 
     onchange(args: SelectedIndexChangedEventData) {
-        console.log(`Drop Down selected index changed from ${args.oldIndex} to ${args.newIndex}`);
         this.country = this.countries[args.newIndex];
         this.countrySelected.emit(this.country);
-        console.log(this.country);
-    }
-
-    updateValues(country: string) {
-        this.country = country;
-        this.countrySelected.emit(country);
-        console.log(country);
     }
 }
